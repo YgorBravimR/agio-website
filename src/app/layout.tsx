@@ -1,10 +1,9 @@
-import type { Metadata } from 'next'
-import { Work_Sans } from 'next/font/google'
-import '../styles/globals.css'
-import { Providers } from './providers'
-import Head from 'next/head'
+import type { Metadata } from "next"
+import { Work_Sans } from "next/font/google"
+import "../styles/globals.css"
+import { Providers } from "./providers"
 
-const workSans = Work_Sans({ subsets: ['latin'] })
+const workSans = Work_Sans({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Ágio | Contabilidade e Perícia",
@@ -28,11 +27,11 @@ export default function RootLayout({
 }) {
   return (
     <>
-    <html lang="en" suppressHydrationWarning>
-      <Providers>
-        <body className={workSans.className}>{children}</body>
-      </Providers>
-    </html>
+      <html lang="en" suppressHydrationWarning>
+        <Providers>
+          <body className={workSans.className}>{children}</body>
+        </Providers>
+      </html>
     </>
   )
 }

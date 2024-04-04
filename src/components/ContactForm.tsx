@@ -1,80 +1,39 @@
-'use client';
-import axios from "axios";
-import { useState } from "react";
-import { z } from "zod";
+"use client"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useForm } from "react-hook-form"
+import { z } from "zod"
+import { Button } from "./ui/button"
 
 export function ContactForm() {
-  const [nameValue, setNameValue] = useState<string>('');
-  const [emailValue, setEmailValue] = useState<string>('');
-  const [messageValue, setMessageValue] = useState<string>('');
+  const formSchema = z.object({
+    name: z.string().min(1, "Required"),
+    email: z.string().email("Invalid email address").min(1, "Required"),
+    message: z.string().min(1, "Required"),
+  })
 
-  function clearStates() {
-    setNameValue('');
-    setEmailValue('');
-    setMessageValue('');
-  }
+  type FormSchema = z.infer<typeof formSchema>
 
-  async function handleClickSendButton() {
-    try {
-      const schema = z.object({
-        name: z.string().min(1),
-        email: z.string().email(),
-        message: z.string().min(1),
-      })
+  const { register, handleSubmit } = useForm<FormSchema>({
+    resolver: zodResolver(formSchema),
+  })
 
-      const { name, email, message } = schema.parse({
-        name: nameValue,
-        email: emailValue,
-        message: messageValue
-      });
-
-
-      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/messages`, {
-        name,
-        email,
-        message
-      })
-
-      alert(`Thankss ${name}, your message was send successfully!`)
-    } catch (error) {
-      console.log(error)
-      alert(`Sorry ${name}, error sending your message!`)
-    } finally {
-      clearStates()
-    }
+  async function handleClickSendButton(data: FormSchema) {
+    console.log(data)
   }
 
   return (
-    <div className="flex items-center justify-center gap-6 w-full flex-col lg:flex-row text-blackColor">
-      <div className="flex flex-col gap-4 w-full">
-        <input
-          className="w-full border border-gray-300 rounded-md p-2 bg-inputBg"
-          type="text"
-          value={nameValue}
-          onChange={(e) => setNameValue(e.target.value)}
-          placeholder="Name"
-        />
-        <input
-          className="w-full border border-gray-300 rounded-md p-2 bg-inputBg"
-          type="email"
-          value={emailValue}
-          onChange={(e) => setEmailValue(e.target.value)}
-          placeholder="E-mail"
-        />
-        <textarea
-          className="w-full border border-gray-300 rounded-md p-2 bg-inputBg resize-none"
-          value={messageValue}
-          onChange={(e) => setMessageValue(e.target.value)}
-          placeholder="Message"
-          rows={5}
-        />
-      </div>
-      <button
-        className="text-whiteColor dark:text-whiteColor border-blackColor dark:border-whiteColor bg-mainColor font-bold py-2 px-4 rounded-sm border whitespace-nowrap"
-        onClick={() => handleClickSendButton()}
-      >
-        Send Message
-      </button>
-    </div>
+    <form className="flex flex-col items-center gap-4 w-full text-2xl" onSubmit={handleSubmit(handleClickSendButton)}>
+      <input className="w-full border border-gray-300 rounded-md p-2 bg-inputBg" type="text" placeholder="Name" {...register("name")} />
+      <input className="w-full border border-gray-300 rounded-md p-2 bg-inputBg" type="email" placeholder="E-mail" {...register("email")} />
+      <textarea
+        className="w-full border border-gray-300 rounded-md p-2 bg-inputBg resize-none"
+        placeholder="Message"
+        rows={8}
+        {...register("message")}
+      />
+      <Button type="submit" variant="ocean" className="uppercase">
+        Enviar mensagem
+      </Button>
+    </form>
   )
 }

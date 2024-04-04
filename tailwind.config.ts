@@ -10,15 +10,12 @@ const colors = {
   slateColor: "#5c6e70",
   leafGreenColor: "#1d4441",
   skyBlueColor: "#2fd6c7",
+  skyBlueColor20: "#2fd6c7",
 }
 
 const config: Config = {
   darkMode: "class",
-  content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+  content: ["./src/pages/**/*.{js,ts,jsx,tsx,mdx}", "./src/components/**/*.{js,ts,jsx,tsx,mdx}", "./src/app/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     screens: {
       sm: "480px",
@@ -30,8 +27,11 @@ const config: Config = {
       ...colors,
       mainColor: colors.leafGreenColor,
       secondaryColor: colors.skyBlueColor,
-      mainText: colors.whiteColor,
-      detailsText: colors.skyBlueColor,
+      secondaryColor20: colors.skyBlueColor,
+      lightTextColor: colors.whiteColor,
+      darkTextColor: colors.leafGreenColor,
+      detailTextColor: colors.skyBlueColor,
+      mainBgColor: colors.lightGrayColor,
     },
     extend: {
       borderRadius: {
@@ -47,6 +47,10 @@ const config: Config = {
         "120": "30rem",
         "130": "32.5rem",
         "140": "35rem",
+      },
+      padding: {
+        xScreen: "6rem",
+        yScreen: "3rem",
       },
     },
   },
