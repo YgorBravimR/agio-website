@@ -18,7 +18,7 @@ export function ContactForm() {
   })
 
   async function handleClickSendButton(data: FormSchema) {
-    console.log(data)
+    window.alert(JSON.stringify(data))
   }
 
   return (

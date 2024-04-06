@@ -105,7 +105,7 @@ export default function Home() {
           <ContactForm />
           <div className="h-full flex flex-col gap-4 items-center justify-center">
             <Image src="./agioLogo.svg" alt="" width={200} height={100} />
-            <div className="w-full h-full bg-lightGrayColor bg-[url('/mapsImage.png')] bg-cover bg-center bg-no-repeat" />
+            <div className="w-full h-full bg-lightGrayColor bg-[url('/mapsImage.png')] bg-cover bg-center bg-no-repeat mb-16" />
           </div>
         </section>
       </main>
