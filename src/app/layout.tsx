@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { Work_Sans } from "next/font/google"
 import "../styles/globals.css"
-import { Providers } from "./providers"
 
 const workSans = Work_Sans({ subsets: ["latin"] })
 
@@ -22,14 +21,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <>
-      <html lang="en" suppressHydrationWarning>
-        <Providers>
-          <body className={workSans.className} style={{ position: "relative" }}>
-            {children}
-          </body>
-        </Providers>
-      </html>
-    </>
+    <html lang="en" suppressHydrationWarning>
+      <body className={workSans.className} style={{ position: "relative", overflowX: "hidden" }}>
+        {children}
+      </body>
+    </html>
   )
 }

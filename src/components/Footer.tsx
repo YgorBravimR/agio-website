@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image"
 import { NavigateButton } from "./NavigateButton"
 import { IconButton } from "./IconButton"
@@ -13,7 +14,7 @@ export function Footer() {
           <span>{footerSectionData.workingTimeText}</span>
         </div>
         <div className="flex flex-col gap-1 text-center">
-          <span className="text-3xl">Navegação</span>
+          {/* <span className="text-3xl">Navegação</span> */}
           {navbarItems.map((item, i) => (
             <span className="text-xl" key={item.goingToUrl + i}>
               <NavigateButton title={item.title} id={item.goingToUrl} />

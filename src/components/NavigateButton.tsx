@@ -1,6 +1,9 @@
+"use client"
 interface INavigateButtonProps {
   id: string
   title: string
+  mobile?: boolean
+  customOnClick?: () => void
 }
 
 const scrollToSection = (id: string) => {
@@ -17,6 +20,16 @@ const scrollToSection = (id: string) => {
   }
 }
 
-export function NavigateButton({ id, title }: INavigateButtonProps) {
-  return <button onClick={() => scrollToSection(id)}>{title}</button>
+export function NavigateButton({ id, title, mobile, customOnClick }: INavigateButtonProps) {
+  return (
+    <button
+      className={mobile ? "w-full py-2 text-center text-xl bg-leafGreenColorLight text-whiteColor font-semibold tracking-wider" : ""}
+      onClick={() => {
+        scrollToSection(id)
+        customOnClick && customOnClick()
+      }}
+    >
+      {title}
+    </button>
+  )
 }
