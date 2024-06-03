@@ -1,5 +1,4 @@
 import Image from "next/image"
-import { useRef, useState, useEffect, useMemo } from "react"
 
 interface Props {
   description: string
@@ -8,7 +7,7 @@ interface Props {
   userName: string
 }
 
-export function SocialProveCard({ description, company, image, userName }: Props) {
+export function SocialProofCard({ description, company, image, userName }: Props) {
   return (
     <div className="px-2 py-2 w-full h-full flex flex-col justify-between items-center bg-[#00000020] border border-mainColor rounded-2xl text-center text-lightTextColor hover:rounded-tl-[160px] transition-all duration-1000">
       <Image src={image} alt="" height={300} width={300} className="w-full aspect-square object-cover rounded-tl-[160px]" />

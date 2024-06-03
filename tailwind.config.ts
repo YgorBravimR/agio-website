@@ -61,6 +61,10 @@ const config: Config = {
       padding: {
         xScreen: "6rem",
         yScreen: "3rem",
+        xScreenMd: "3rem",
+        yScreenMd: "1.5rem",
+        xScreenSm: "1.5rem",
+        yScreenSm: "0.75rem",
       },
     },
   },

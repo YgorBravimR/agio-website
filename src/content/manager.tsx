@@ -46,6 +46,8 @@ export const headerSectionData = {
 export const homeSectionData = {
   title: "Sua contabilidade com maior eficiência, praticidade e qualidade!",
   subtitle: "Simplificamos e desburocratizamos os seus processos para você focar 100% no seu negócio.",
+  buttonOneText: "Abrir CNPJ",
+  buttonTwoText: "Trocar de contador",
 }
 
 export const companyInfoData = [
@@ -95,27 +97,27 @@ export const aboutSectionData = {
 }
 
 export const socialProvesSectionData = {
-  title: "O que dizem alguns de nossos clientes",
+  title: "O que nossos clientes dizem",
   cards: [
     {
       description:
         "Texto de prova social Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rhoncus iacu mollis. egestas tincidunt mi vitae tempus. Fusce aliquet leo, imperdiet eleifend ex dapibus et. Sed lorem nibh, cus iacu mollis. awdssaccad egestas doiu lor tincidunt mi vitae tempus. Fusc",
       company: "Fulana de tal",
-      image: "https://source.unsplash.com/random",
+      image: "https://source.unsplash.com/300x200/?office",
       userName: "Empresa da Silva Sauro ME",
     },
     {
       description:
         "Texto de prova social Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rhoncus iacu mollis. egnd ex dapibus et. Sed lorem nibh, cus iacu mollis. awdssaccad egestas doiu lor tincidunt mi vitae tempus. Fusc",
       company: "Fulana de tal",
-      image: "https://source.unsplash.com/random",
+      image: "https://source.unsplash.com/300x200/?technology",
       userName: "Empresa da Silva Sauro ME",
     },
     {
       description:
         "Texto de prova social Loreor sit amet Fusce aliquet leo, imperdiet eleibus et. Sed bh, cus iacu mollis. awdssaccad egestas doiu i vitae tempusc",
       company: "Fulana de tal",
-      image: "https://source.unsplash.com/random",
+      image: "https://source.unsplash.com/300x200/?work",
       userName: "Empresa da Silva Sauro ME",
     },
   ],
@@ -162,8 +164,18 @@ export const footerSectionData = {
 
 export const missionSectionData = {
   mission: {
-    title: "Nossa missão",
-    description: " ",
+    title: "Missão",
+    description:
+      "Ajudar os empreendedores a compreenderem o seu negócio, auxiliando na tomada de decisões com proximidade, praticidade e eficiência, para pequenas, médias e grandes empresas.",
+  },
+  vision: {
+    title: "Visão",
+    description:
+      "Ser referência no mercado de contabilidade e perícia capixaba, buscando melhoria contínua com o apoio de novas tecnologias.",
+  },
+  values: {
+    title: "Valores",
+    description: "Transparência, respeito e atendimento humanizado, são os valores que nós prezamos.",
   },
 }
 

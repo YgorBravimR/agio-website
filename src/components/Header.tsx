@@ -12,14 +12,14 @@ export function Header() {
 
   return (
     <>
-      <header className="flex flex-row md:flex-col lg:flex-row md:items-center lg:items-end sm:justify-between md:justify-start gap-4 bg-mainBgColor text-darkTextColor text-xl px-8 lg:px-40 py-4 relative">
+      <header className="flex flex-row md:flex-col lg:flex-row md:items-center lg:items-end justify-between md:justify-start gap-4 bg-mainBgColor text-darkTextColor text-xl px-8 lg:px-40 py-4 relative">
         <div className="md:flex md:gap-8">
           <AgioLogo
             props={{ width: headerSectionData.logo.width }}
             mainColor={headerSectionData.logo.mainColor}
             detailColor={headerSectionData.logo.detailColor}
           />
-          <div className="sm:hidden md:flex md:flex-col lg:flex-row lg:absolute md:items-start lg:items-center md:justify-center lg:justify-between md:gap-2 lg:gap-8 bg-mainColor text-lightTextColor text-sm top-4 right-40 px-8 py-2 rounded-tr-2xl rounded-bl-2xl">
+          <div className="hidden md:flex md:flex-col lg:flex-row lg:absolute md:items-start lg:items-center md:justify-center lg:justify-between md:gap-2 lg:gap-8 bg-mainColor text-lightTextColor text-sm top-4 right-40 px-8 py-2 rounded-tr-2xl rounded-bl-2xl">
             <div className="flex gap-2 items-center">
               <LocationIcon width={24} height={24} fill="#009db6" />
               <span>{headerSectionData.address}</span>

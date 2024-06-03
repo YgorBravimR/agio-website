@@ -9,7 +9,7 @@ export function GoogleMaps() {
   const center = { lat: -20.338101381686847, lng: -40.30565180458265 }
 
   return (
-    <div className="w-full h-full mb-16 rounded-lg">
+    <div className="w-full h-full mb-16 rounded-lg" id="google-maps-block">
       {isLoaded ? (
         <GoogleMap
           mapContainerStyle={{ width: "100%", height: "100%", borderRadius: "24px" }}
