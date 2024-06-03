@@ -179,8 +179,4 @@ export const missionSectionData = {
   },
 }
 
-export const whatsAppNumber = "27999541160"
-
-export const service_ID = "service_u3ksi6p"
-export const email_template_ID = "template_hvdjrwn"
-export const user_ID = "Cj20wOuh49KzVVg57"
+export const whatsAppNumber = "27992462186"

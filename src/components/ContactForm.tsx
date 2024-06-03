@@ -4,9 +4,12 @@ import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { Button } from "./Button"
 import emailjs from "emailjs-com"
-import { email_template_ID, service_ID, user_ID } from "@/content/manager"
 
 export function ContactForm({ rows = 8 }: { rows?: number }) {
+  const service_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string
+  const email_template_ID = process.env.NEXT_PUBLIC_EMAILJS_EMAIL_TEMPLATE_ID as string
+  const user_ID = process.env.NEXT_PUBLIC_EMAILJS_USER_ID as string
+
   const formSchema = z.object({
     name: z.string().min(1, "Required"),
     email: z.string().email("Invalid email address").min(1, "Required"),
