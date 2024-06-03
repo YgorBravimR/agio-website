@@ -3,14 +3,21 @@ import type { Config } from "tailwindcss"
 const colors = {
   whiteColor: "#fefefe",
   blackColor: "#1e1e1e",
-  oceanBlueColor: "#009db6",
-  limeColor: "#a5e55a",
-  grayColor: "#6A868C",
   lightGrayColor: "#edf2f4",
+  grayColor: "#6A868C",
   slateColor: "#5c6e70",
+  limeColor: "#a5e55a",
+  limeColorLight: "#B8E588",
+  limeColorDark: "#93CE50",
+  oceanBlueColor: "#009db6",
+  oceanBlueColorLight: "#00B1CD",
+  oceanBlueColorDark: "#008A9F",
   leafGreenColor: "#1d4441",
+  leafGreenColorLight: "#2B605B",
+  leafGreenColorDark: "#183432",
   skyBlueColor: "#2fd6c7",
-  skyBlueColor20: "#2fd6c7",
+  skyBlueColorLight: "#34EFDE",
+  skyBlueColorDark: "#2ABEB0",
 }
 
 const config: Config = {
@@ -23,17 +30,20 @@ const config: Config = {
       lg: "1280px",
       xl: "1920px",
     },
-    colors: {
-      ...colors,
-      mainColor: colors.leafGreenColor,
-      secondaryColor: colors.skyBlueColor,
-      secondaryColor20: colors.skyBlueColor,
-      lightTextColor: colors.whiteColor,
-      darkTextColor: colors.leafGreenColor,
-      detailTextColor: colors.skyBlueColor,
-      mainBgColor: colors.lightGrayColor,
-    },
     extend: {
+      colors: {
+        ...colors,
+        mainColor: colors.leafGreenColor,
+        secondaryColor: colors.skyBlueColor,
+        secondaryColor20: colors.skyBlueColor,
+        lightTextColor: colors.whiteColor,
+        darkTextColor: colors.leafGreenColor,
+        detailTextColor: colors.skyBlueColor,
+        mainBgColor: colors.lightGrayColor,
+      },
+      backgroundImage: {
+        "custom-gradient": "linear-gradient(45deg, rgba(29,68,65,1) 15%, rgba(255,255,255,1) 17%, rgba(255,255,255,1) 83%, #2B7671 85%)",
+      },
       borderRadius: {
         "4xl": "2rem",
         "5xl": "2.5rem",

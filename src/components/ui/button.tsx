@@ -5,15 +5,15 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "border-2 shadow-lg inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-neutral-950 disabled:pointer-events-none disabled:opacity-50 dark:focus-visible:ring-neutral-300",
+  "border-2 shadow-lg inline-flex items-center justify-center whitespace-nowrap rounded-md font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-neutral-950 disabled:pointer-events-none disabled:opacity-50 dark:focus-visible:ring-neutral-300 rounded-full",
   {
     variants: {
       variant: {
         default:
           "bg-neutral-900 text-neutral-50 hover:bg-neutral-900/90 dark:bg-neutral-50 dark:text-neutral-900 dark:hover:bg-neutral-50/90",
-        sky: "bg-skyBlueColor border-leafGreenColor text-lightTextColor",
-        lime: "bg-limeColor border-leafGreenColor text-darkTextColor",
-        ocean: "bg-oceanBlueColor border-blackColor text-blackColor",
+        sky: "bg-skyBlueColor border-leafGreenColor text-lightTextColor hover:bg-skyBlueColorDark",
+        lime: "bg-limeColor border-leafGreenColor text-darkTextColor hover:bg-limeColorDark",
+        ocean: "bg-oceanBlueColor border-blackColor text-blackColor hover:bg-oceanBlueColorDark",
       },
       size: {
         default: "h-12 text-2xl px-4 py-2",

@@ -1,18 +1,8 @@
 import { SVGProps } from "react"
 
 const MoneyEngineIcon = (props: SVGProps<SVGSVGElement>) => (
-  <svg
-    version="1.0"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-    viewBox="0 0 512.000000 512.000000"
-    preserveAspectRatio="xMidYMid meet"
-  >
-    <g
-      transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-      fill="#1d4441"
-      stroke="none"
-    >
+  <svg version="1.0" xmlns="http://www.w3.org/2000/svg" {...props} viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
+    <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" stroke="none">
       <path
         d="M3490 5019 c-129 -55 -246 -111 -259 -124 -17 -16 -25 -36 -25 -57 0
 -31 183 -485 208 -517 6 -8 26 -20 44 -28 45 -19 97 3 117 50 17 41 15 50 -49

@@ -1,10 +1,22 @@
-import Link from "next/link"
-
 interface INavigateButtonProps {
-  href: string
+  id: string
   title: string
 }
 
-export function NavigateButton({ href, title }: INavigateButtonProps) {
-  return <Link href={href}>{title}</Link>
+const scrollToSection = (id: string) => {
+  const element = document.getElementById(id)
+
+  if (element) {
+    const topPos = element.getBoundingClientRect().top + window.pageYOffset
+    const offset = topPos - (window.innerHeight / 2 - element.clientHeight / 2)
+
+    window.scrollTo({
+      top: offset,
+      behavior: "smooth",
+    })
+  }
+}
+
+export function NavigateButton({ id, title }: INavigateButtonProps) {
+  return <button onClick={() => scrollToSection(id)}>{title}</button>
 }

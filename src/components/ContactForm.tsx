@@ -2,7 +2,9 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
-import { Button } from "./ui/button"
+import { Button } from "./ui/Button"
+import emailjs from "emailjs-com"
+import { email_template_ID, service_ID, user_ID } from "@/content/manager"
 
 export function ContactForm() {
   const formSchema = z.object({
@@ -13,21 +15,53 @@ export function ContactForm() {
 
   type FormSchema = z.infer<typeof formSchema>
 
-  const { register, handleSubmit } = useForm<FormSchema>({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<FormSchema>({
     resolver: zodResolver(formSchema),
   })
 
   async function handleClickSendButton(data: FormSchema) {
-    window.alert(JSON.stringify(data))
+    const { name, email, message } = data
+
+    const templateParams = {
+      from_name: name,
+      from_email: email,
+      message: message,
+    }
+
+    emailjs.send(service_ID, email_template_ID, templateParams, user_ID).then(
+      (response) => {
+        alert("Message sent successfully!")
+        reset()
+      },
+      (err) => {
+        console.error("FAILED...", err)
+        alert("Failed to send the message, please try again")
+      }
+    )
   }
 
   return (
     <form className="flex flex-col items-center gap-4 w-full text-2xl" onSubmit={handleSubmit(handleClickSendButton)}>
-      <input className="w-full border border-gray-300 rounded-md p-2 bg-inputBg" type="text" placeholder="Name" {...register("name")} />
-      <input className="w-full border border-gray-300 rounded-md p-2 bg-inputBg" type="email" placeholder="E-mail" {...register("email")} />
+      <input
+        className={`w-full border rounded-md p-2 bg-inputBg ${errors.name ? "border-red-500" : "border-gray-300"}`}
+        type="text"
+        placeholder="Seu nome"
+        {...register("name")}
+      />
+      <input
+        className={`w-full border rounded-md p-2 bg-inputBg ${errors.email ? "border-red-500" : "border-gray-300"}`}
+        type="email"
+        placeholder="Seu melhor email"
+        {...register("email")}
+      />
       <textarea
-        className="w-full border border-gray-300 rounded-md p-2 bg-inputBg resize-none"
-        placeholder="Message"
+        className={`w-full border rounded-md p-2 bg-inputBg resize-none ${errors.message ? "border-red-500" : "border-gray-300"}`}
+        placeholder="Escreva aqui sua mensagem..."
         rows={8}
         {...register("message")}
       />

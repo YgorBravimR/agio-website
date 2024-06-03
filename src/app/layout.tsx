@@ -20,16 +20,14 @@ export const metadata: Metadata = {
   // },
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <html lang="en" suppressHydrationWarning>
         <Providers>
-          <body className={workSans.className}>{children}</body>
+          <body className={workSans.className} style={{ position: "relative" }}>
+            {children}
+          </body>
         </Providers>
       </html>
     </>
