@@ -5,7 +5,7 @@ import { headerSectionData, navbarItems } from "@/content/manager"
 import { HamburgerMenuIcon } from "@radix-ui/react-icons"
 import { useState } from "react"
 import { NavigateButton } from "./NavigateButton"
-import { AgioLogo } from "./ui/AgioLogo"
+import { AgioLogo } from "./AgioLogo"
 
 export function Header() {
   const [isNavbarOpen, setIsNavbarOpen] = useState<boolean>(false)

@@ -1,5 +1,5 @@
 import { homeSectionData } from "@/content/manager"
-import { Button } from "../ui/Button"
+import { Button } from "../Button"
 import { paddingScreenSizes, whatsAppRedirect } from "./_index"
 
 export function HomeSection() {

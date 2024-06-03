@@ -1,6 +1,6 @@
 import { aboutSectionData } from "@/content/manager"
 import Image from "next/image"
-import { Button } from "../ui/Button"
+import { Button } from "../Button"
 import { paddingScreenSizes, whatsAppRedirect } from "./_index"
 
 export function AboutSection() {

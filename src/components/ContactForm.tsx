@@ -2,7 +2,7 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
-import { Button } from "./ui/Button"
+import { Button } from "./Button"
 import emailjs from "emailjs-com"
 import { email_template_ID, service_ID, user_ID } from "@/content/manager"
 
