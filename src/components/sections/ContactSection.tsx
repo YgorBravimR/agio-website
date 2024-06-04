@@ -28,7 +28,7 @@ export function ContactSection() {
           ))}
         </div>
       </div>
-      <div className="w-full flex lg:grid lg:grid-cols-2 gap-12 items-center justify-center">
+      <div className="w-full flex lg:grid lg:grid-cols-2 gap-12 items-center justify-center  max-w-body">
         <ContactForm rows={isMediumScreen ? 4 : 6} />
         <div className="w-full h-full hidden lg:block pb-16">
           <GoogleMaps />

@@ -7,7 +7,7 @@ export function AboutSection() {
   return (
     <section
       id="about"
-      className={`h-full flex items-end justify-center rounded-tr-[75px] md:rounded-tr-[150px] bg-gradient-to-bl from-[#39a39b] to-leafGreenColorDark via-leafGreenColorLight" ${paddingScreenSizes} lg:pb-0`}
+      className={`h-full flex items-end justify-center rounded-tr-[75px] md:rounded-tr-[150px] bg-gradient-to-bl from-[#39a39b] to-leafGreenColorDark via-leafGreenColorLight" ${paddingScreenSizes} lg:pb-0 `}
     >
       <div className="h-full w-[35%] hidden lg:block">
         <Image

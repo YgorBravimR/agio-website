@@ -1,15 +1,16 @@
 "use client"
 import { zodResolver } from "@hookform/resolvers/zod"
+import emailjs from "emailjs-com"
+import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { Button } from "./Button"
-import emailjs from "emailjs-com"
-import { useEffect, useState } from "react"
-import * as Progress from "@radix-ui/react-progress"
 import { useToast } from "./ui/use-toast"
+import useScreenSize from "@/hooks/useScreenSize"
 
 export function ContactForm({ rows = 8 }: { rows?: number }) {
   const [isSending, setIsSending] = useState(false)
+  const isSmallScreen = useScreenSize().width < 520
 
   const { toast } = useToast()
 
@@ -90,7 +91,7 @@ export function ContactForm({ rows = 8 }: { rows?: number }) {
         disabled={isSending}
         {...register("message")}
       />
-      <Button type="submit" variant="ocean" className="uppercase w-56 text-lg" disabled={isSending}>
+      <Button type="submit" variant="ocean" className={isSmallScreen ? "w-56 text-lg" : undefined} disabled={isSending}>
         Enviar mensagem
       </Button>
     </form>

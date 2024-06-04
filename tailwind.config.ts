@@ -58,6 +58,9 @@ const config: Config = {
         "130": "32.5rem",
         "140": "35rem",
       },
+      maxWidth: {
+        body: "1280px",
+      },
       padding: {
         xScreen: "6rem",
         yScreen: "3rem",

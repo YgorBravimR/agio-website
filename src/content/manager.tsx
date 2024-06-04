@@ -53,39 +53,43 @@ export const homeSectionData = {
 export const companyInfoData = [
   {
     title: "Abertura de empresa",
-    description: "Um texto aqui representando o que diz no titulo do card. Lorem ipsunat tecum dominus",
+    description:
+      "Abrir uma empresa pode ser um desafio, mas estamos aqui para simplificar o processo! Nossa equipe de especialistas em contabilidade cuidará de toda a burocracia, garantindo uma abertura rápida e sem complicações. Fale conosco e dê o primeiro passo rumo ao sucesso!",
     icon: <BankIcon width={72} height={72} fill="#1d4441" />,
     buttonText: "Saiba mais",
   },
   {
     title: "Regularização de débitos",
-    description: "Um texto aqui representando o que diz no titulo do card. Lorem ipsunat tecum dominus",
+    description:
+      "Regularize seus débitos com a ajuda de nossos especialistas em contabilidade. Analisamos suas pendências e traçamos a melhor estratégia para quitar suas dívidas, garantindo sua tranquilidade financeira. Entre em contato e recupere o controle do seu negócio!",
     icon: <MoneyEngineIcon width={72} height={72} fill="#1d4441" />,
     buttonText: "Saiba mais",
   },
   {
     title: "Contabilidade completa",
     description:
-      "Fazemos toda a estruturação Um texto aqui representando o que diz no titulo do card. Lorem ipsunat tecum dominus financeira e de processos da sua empresa. Perícias, laudos, impugnações e assistências técnicas trabalhistas,cíveis e contábeis.Fazemos toda a estruturação Um texto aqui representando o que diz no titulo do card. Lorem ipsunat tecum dominus financeira e de processos da sua empresa. Perícias, laudos, impugnações e assistências técnicas trabalhistas,cíveis e contábeis. Um texto aqui representando o que diz no titulo do card. Lorem ipsunat tecum dominus",
+      "Deixe a contabilidade da sua empresa em mãos de especialistas. Oferecemos serviços completos, desde a gestão financeira até o planejamento tributário, para garantir a saúde do seu negócio. Fale conosco e veja como podemos ajudar a sua empresa a crescer com segurança!",
     icon: <DolarPaperIcon width={72} height={72} fill="#1d4441" />,
     buttonText: "Saiba mais",
   },
   {
     title: "Perícias e cálculos judiciais",
-    description: "Perícias, laudos, impugnações e assistências técnicas trabalhistas,cíveis e contábeis.",
+    description:
+      "Precisando de perícias e cálculos judiciais? Nossa equipe especializada oferece soluções precisas e confiáveis para auxiliar em processos judiciais e administrativos. Conte conosco para garantir a exatidão e a credibilidade necessárias. Entre em contato hoje mesmo!",
     icon: <AcountingIcon width={72} height={72} fill="#1d4441" />,
     buttonText: "Saiba mais",
   },
   {
     title: "Gestão financeira e processos",
     description:
-      "Fazemos toda a estruturação Um texto aqui representando o que diz no titulo do card. Lorem ipsunat tecum dominus financeira e de processos da sua empresa. Perícias, laudos, impugnações e assistências técnicas trabalhistas,cíveis e contábeis.",
+      "Transforme a gestão financeira e de processos da sua empresa com nossos serviços especializados. Otimizamos recursos, melhoramos a eficiência e impulsionamos seu crescimento. Deixe que nossos profissionais cuidem das finanças e processos, enquanto você foca no seu negócio!",
     icon: <UserIcon width={72} height={72} fill="#1d4441" />,
     buttonText: "Saiba mais",
   },
   {
     title: "Atendimento à pessoas físicas",
-    description: "Cuidamos da sua pessoa física, imposto de renda e carnê leão.",
+    description:
+      "Precisando de ajuda com sua contabilidade pessoal? Oferecemos atendimento especializado para pessoas físicas, incluindo declaração de imposto de renda, planejamento financeiro e regularização de débitos. Conte com a nossa expertise para manter suas finanças em dia!",
     icon: <MoneyManagementIcon width={72} height={72} fill="#1d4441" />,
     buttonText: "Saiba mais",
   },

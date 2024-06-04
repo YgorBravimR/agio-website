@@ -21,8 +21,8 @@ export function Footer() {
           ))}
         </div>
       </div>
-      <div className="hidden md:block h-[2px] w-3/4 md:w-4/5 bg-oceanBlueColor" />
-      <div className="flex gap-4 items-center justify-center md:justify-end w-3/4 md:w-4/5">
+      <div className="hidden md:block h-[2px] w-3/4 md:w-4/5 bg-oceanBlueColor  max-w-body" />
+      <div className="flex gap-4 items-center justify-center md:justify-end w-3/4 md:w-4/5 max-w-body">
         {footerSectionData.icons.map((item, i) => (
           <IconButton key={i + item.goingToUrl} href={item.goingToUrl} src={item.sourceUrl} alt={item.alternativeText} link />
         ))}
