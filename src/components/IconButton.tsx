@@ -9,7 +9,7 @@ interface Props {
 }
 
 export function IconButton({ href, src, alt, className, link }: Props) {
-  const defaultClassName = useMemo(() => "w-8 h-8 md:w-9 md:h-9 lg:w-10 lg:h-10", [])
+  const defaultClassName = useMemo(() => "w-7 h-7 md:w-9 md:h-9 lg:w-10 lg:h-10", [])
 
   return (
     <a href={href} target={link ? "_blank" : undefined}>

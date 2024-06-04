@@ -6,9 +6,11 @@ import { HamburgerMenuIcon } from "@radix-ui/react-icons"
 import { useState } from "react"
 import { NavigateButton } from "./NavigateButton"
 import { AgioLogo } from "./AgioLogo"
+import useScreenSize from "@/hooks/useScreenSize"
 
 export function Header() {
   const [isNavbarOpen, setIsNavbarOpen] = useState<boolean>(false)
+  const isSmallScreen = useScreenSize().width < 520
 
   return (
     <>
@@ -47,7 +49,7 @@ export function Header() {
             key={item.title + i}
             id={item.goingToUrl}
             title={item.title}
-            mobile
+            mobile={isSmallScreen}
             customOnClick={() => setIsNavbarOpen(false)}
           />
         ))}

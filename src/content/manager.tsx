@@ -55,31 +55,39 @@ export const companyInfoData = [
     title: "Abertura de empresa",
     description: "Um texto aqui representando o que diz no titulo do card. Lorem ipsunat tecum dominus",
     icon: <BankIcon width={72} height={72} fill="#1d4441" />,
+    buttonText: "Saiba mais",
   },
   {
     title: "Regularização de débitos",
     description: "Um texto aqui representando o que diz no titulo do card. Lorem ipsunat tecum dominus",
     icon: <MoneyEngineIcon width={72} height={72} fill="#1d4441" />,
+    buttonText: "Saiba mais",
   },
   {
     title: "Contabilidade completa",
-    description: "Um texto aqui representando o que diz no titulo do card. Lorem ipsunat tecum dominus",
+    description:
+      "Fazemos toda a estruturação Um texto aqui representando o que diz no titulo do card. Lorem ipsunat tecum dominus financeira e de processos da sua empresa. Perícias, laudos, impugnações e assistências técnicas trabalhistas,cíveis e contábeis.Fazemos toda a estruturação Um texto aqui representando o que diz no titulo do card. Lorem ipsunat tecum dominus financeira e de processos da sua empresa. Perícias, laudos, impugnações e assistências técnicas trabalhistas,cíveis e contábeis. Um texto aqui representando o que diz no titulo do card. Lorem ipsunat tecum dominus",
     icon: <DolarPaperIcon width={72} height={72} fill="#1d4441" />,
+    buttonText: "Saiba mais",
   },
   {
     title: "Perícias e cálculos judiciais",
     description: "Perícias, laudos, impugnações e assistências técnicas trabalhistas,cíveis e contábeis.",
     icon: <AcountingIcon width={72} height={72} fill="#1d4441" />,
+    buttonText: "Saiba mais",
   },
   {
     title: "Gestão financeira e processos",
-    description: "Fazemos toda a estruturação financeira e de processos da sua empresa.",
+    description:
+      "Fazemos toda a estruturação Um texto aqui representando o que diz no titulo do card. Lorem ipsunat tecum dominus financeira e de processos da sua empresa. Perícias, laudos, impugnações e assistências técnicas trabalhistas,cíveis e contábeis.",
     icon: <UserIcon width={72} height={72} fill="#1d4441" />,
+    buttonText: "Saiba mais",
   },
   {
     title: "Atendimento à pessoas físicas",
     description: "Cuidamos da sua pessoa física, imposto de renda e carnê leão.",
     icon: <MoneyManagementIcon width={72} height={72} fill="#1d4441" />,
+    buttonText: "Saiba mais",
   },
 ]
 
@@ -120,6 +128,27 @@ export const socialProvesSectionData = {
       image: "https://source.unsplash.com/300x200/?work",
       userName: "Empresa da Silva Sauro ME",
     },
+    {
+      description:
+        "Texto de prova social Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rhoncus iacu mollis. egestas tincidunt mi vitae tempus. Fusce aliquet leo, imperdiet eleifend ex dapibus et. Sed lorem nibh, cus iacu mollis. awdssaccad egestas doiu lor tincidunt mi vitae tempus. Fusc",
+      company: "Fulana de tal",
+      image: "https://source.unsplash.com/300x200/?office",
+      userName: "Empresa da Silva Sauro ME",
+    },
+    {
+      description:
+        "Texto de prova social Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rhoncus iacu mollis. egnd ex dapibus et. Sed lorem nibh, cus iacu mollis. awdssaccad egestas doiu lor tincidunt mi vitae tempus. Fusc",
+      company: "Fulana de tal",
+      image: "https://source.unsplash.com/300x200/?technology",
+      userName: "Empresa da Silva Sauro ME",
+    },
+    {
+      description:
+        "Texto de prova social Loreor sit amet Fusce aliquet leo, imperdiet eleibus et. Sed bh, cus iacu mollis. awdssaccad egestas doiu i vitae tempusc",
+      company: "Fulana de tal",
+      image: "https://source.unsplash.com/300x200/?work",
+      userName: "Empresa da Silva Sauro ME",
+    },
   ],
 }
 
@@ -127,8 +156,6 @@ export const contactSectionData = {
   image: {
     sourceUrl: "/agioLogo.svg",
     alternativeText: "Company's logo",
-    height: 100,
-    width: 200,
   },
   companyInfo: [
     {
@@ -158,6 +185,11 @@ export const footerSectionData = {
       goingToUrl: "https://www.linkedin.com/in/user/",
       sourceUrl: "./linkedin.png",
       alternativeText: "Linkedin",
+    },
+    {
+      goingToUrl: "https://www.youtube.com/@agiocontabilidade",
+      sourceUrl: "./youtube.png",
+      alternativeText: "Youtube",
     },
   ],
 }

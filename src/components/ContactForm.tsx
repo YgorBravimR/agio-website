@@ -49,22 +49,25 @@ export function ContactForm({ rows = 8 }: { rows?: number }) {
   }
 
   return (
-    <form className="flex flex-col items-center gap-4 w-full text-sm md:text:lg lg:text-2xl" onSubmit={handleSubmit(handleClickSendButton)}>
-      <p className="text-whiteColor font-bold tracking-wider text-2xl -mb-3 lg:hidden">Deixe-nos uma mensagem</p>
+    <form
+      className="flex flex-col items-center gap-4 w-full md:w-3/5 lg:w-full text-sm md:text:lg lg:text-2xl"
+      onSubmit={handleSubmit(handleClickSendButton)}
+    >
+      <p className="text-whiteColor font-bold tracking-wider text-xl -mb-3 lg:hidden">Deixe-nos uma mensagem</p>
       <input
-        className={`w-full border rounded-md p-2 bg-inputBg ${errors.name ? "border-red-500" : "border-gray-300"}`}
+        className={`w-full border rounded-md p-1 lg:p-2 bg-inputBg ${errors.name ? "border-red-500" : "border-gray-300"}`}
         type="text"
         placeholder="Seu nome"
         {...register("name")}
       />
       <input
-        className={`w-full border rounded-md p-2 bg-inputBg ${errors.email ? "border-red-500" : "border-gray-300"}`}
+        className={`w-full border rounded-md p-1 lg:p-2 bg-inputBg ${errors.email ? "border-red-500" : "border-gray-300"}`}
         type="email"
         placeholder="Seu melhor email"
         {...register("email")}
       />
       <textarea
-        className={`w-full border rounded-md p-2 bg-inputBg resize-none ${errors.message ? "border-red-500" : "border-gray-300"}`}
+        className={`w-full border rounded-md p-1 lg:p-2 bg-inputBg resize-none ${errors.message ? "border-red-500" : "border-gray-300"}`}
         placeholder="Escreva aqui sua mensagem..."
         rows={rows}
         {...register("message")}

@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect } from "react"
 
-// sm: "480px"
+// sm: "520px"
 // md: "768px"
 // lg: "1280px"
 // xl: "1920px"

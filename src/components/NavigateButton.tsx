@@ -1,4 +1,7 @@
 "use client"
+
+import Link from "next/link"
+
 interface INavigateButtonProps {
   id: string
   title: string
@@ -25,11 +28,11 @@ export function NavigateButton({ id, title, mobile, customOnClick }: INavigateBu
     <button
       className={mobile ? "w-full py-2 text-center text-xl bg-leafGreenColorLight text-whiteColor font-semibold tracking-wider" : ""}
       onClick={() => {
-        scrollToSection(id)
+        !mobile && scrollToSection(id)
         customOnClick && customOnClick()
       }}
     >
-      {title}
+      {mobile ? <Link href={"#" + id}>{title}</Link> : title}
     </button>
   )
 }

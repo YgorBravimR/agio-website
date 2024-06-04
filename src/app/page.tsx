@@ -28,7 +28,7 @@ export default function Home() {
         href={whatsAppLink}
         src="./whatsApp.png"
         alt="WhatsApp"
-        className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 fixed bottom-5 right-10 z-[999]"
+        className="w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 fixed bottom-5 right-4 md:right-7 lg:right-10 z-[999]"
         link
       />
       <Footer />
