@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Work_Sans } from "next/font/google"
 import "../styles/globals.css"
+import { Toaster } from "@/components/ui/toaster"
 
 const workSans = Work_Sans({ subsets: ["latin"] })
 
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" suppressHydrationWarning>
       <body className={workSans.className} style={{ position: "relative", overflowX: "hidden" }}>
         {children}
+        <Toaster />
       </body>
     </html>
   )
