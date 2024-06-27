@@ -1,8 +1,10 @@
+import { StaticImport } from "next/dist/shared/lib/get-img-props"
+import Image from "next/image"
 import { useMemo } from "react"
 
 interface Props {
   href: string
-  src: string
+  src: string | StaticImport
   alt: string
   className?: string
   link?: boolean
@@ -13,7 +15,7 @@ export function IconButton({ href, src, alt, className, link }: Props) {
 
   return (
     <a href={href} target={link ? "_blank" : undefined}>
-      <img src={src} alt={alt} className={className || defaultClassName} />
+      <Image width={120} height={120} src={src} alt={alt} className={className || defaultClassName} />
     </a>
   )
 }

@@ -1,6 +1,6 @@
 "use client"
 import { zodResolver } from "@hookform/resolvers/zod"
-import emailjs from "emailjs-com"
+// import emailjs from "emailjs-com"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
@@ -36,30 +36,40 @@ export function ContactForm({ rows = 8 }: { rows?: number }) {
   })
 
   async function handleClickSendButton(data: FormSchema) {
-    const { name, email, message } = data
     setIsSending(true)
+    const { name, email, message } = data
 
     const templateParams = {
-      from_name: name,
-      from_email: email,
-      message: message,
+      name,
+      from: email,
+      message,
     }
 
-    await emailjs.send(service_ID, email_template_ID, templateParams, user_ID).then(
-      (response) => {
-        toast({
-          title: `Olá ${name}, seu email foi enviado com sucesso!`,
-          variant: "success",
-        })
-        reset()
+    console.log("templateParams", templateParams)
+
+    await fetch("/api/emails", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
       },
-      (err) => {
-        toast({
-          title: `Desculpas ${name}, não conseguimos enviar seu email.`,
-          variant: "destructive",
-        })
-      }
-    )
+      body: JSON.stringify(templateParams),
+    })
+
+    // await emailjs.send(service_ID, email_template_ID, templateParams, user_ID).then(
+    //   (response) => {
+    //     toast({
+    //       title: `Olá ${name}, seu email foi enviado com sucesso!`,
+    //       variant: "success",
+    //     })
+    //     reset()
+    //   },
+    //   (err) => {
+    //     toast({
+    //       title: `Desculpas ${name}, não conseguimos enviar seu email.`,
+    //       variant: "destructive",
+    //     })
+    //   }
+    // )
 
     setIsSending(false)
   }

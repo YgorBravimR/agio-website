@@ -1,40 +1,39 @@
-# WEBSITE Portfolio Next 24
+# SITE Agio 2024
 
-This is Ygor's portfolio website.
+Esse é o site da empresa Ágio contabilidade e perícia.
 
-## Getting Started
+## Alterando informações.
 
-Follow these steps to run the application locally.
+Todas os conteúdos estão contidos dentro do arquivo *manager.tsx* dentro da pasta *contents*, ao alterar e salvar este arquivo, o conteudo do site será refeito de acordo com o que foi alterado.
 
-### 1. Clone the Repository
+![alt text](image-1.png)
 
+Ao finalizar o commit das alterações, e subir essas alterações para o repositório remoto, dentro de alguns minutos o conteúdo alterado estará disponível no site em produção.
+
+## Whatsapp.
+O número de telefone redirecionado pelo whatsapp esta contído no arquivo *manager.tsx*
+
+![alt text](image.png)
+
+## Projeto
+
+Para rodar o projeto localmente, siga esses passos:
+
+### 1. Clonando o repositório
+
+- Entre no terminal do seu computador e digite os comandos:
 ```
-git clone https://github.com/YgorBravimR/web-portfolio-next-24.git
-cd web-portfolio-next-24
+git clone https://github.com/YgorBravimR/agio-website.git
+cd agio-website
 ```
 
-2. Install Dependencies
+2. Instale as dependências.
 
 ```
 yarn install
 ```
 
-3. Start the application
+3. Inicie a aplicação.
 ```
 yarn dev
 ```
-
-
-## Folder Structure
-The application is architectured in a next app router pattern using src folder.
- <br/> <br/>
-/src: Source code of the application <br/>
-/src/app: Pages and website configuration files. <br/>
-/src/assets: Assets used on the aplication. <br/>
-/src/components: Specific and general use components. <br/>
-/src/components/mobile: Component specific to small size media screens.<br/>
-/src/styles: Global styles. <br/>
-/src/utils: Variables and util functions used throughout the aplication. <br/>
-
-License
-This project is licensed under the MIT License.

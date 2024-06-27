@@ -9,6 +9,9 @@ import {
   SmartphoneIcon,
   UserIcon,
 } from "@/assets"
+import instagramImg from "@/assets/images/instagram.png"
+import linkedinImg from "@/assets/images/linkedin.png"
+import youtubeImg from "@/assets/images/youtube.png"
 
 export const navbarItems = [
   {
@@ -19,10 +22,10 @@ export const navbarItems = [
     title: "Nossa atuação",
     goingToUrl: "services",
   },
-  {
-    title: "Quem somos",
-    goingToUrl: "about",
-  },
+  // {
+  //   title: "Quem somos",
+  //   goingToUrl: "about",
+  // },
   {
     title: "Nossa missão",
     goingToUrl: "mission",
@@ -182,17 +185,17 @@ export const footerSectionData = {
   icons: [
     {
       goingToUrl: "https://www.instagram.com/user/",
-      sourceUrl: "./instagram.png",
+      sourceUrl: instagramImg,
       alternativeText: "Instagram",
     },
     {
       goingToUrl: "https://www.linkedin.com/in/user/",
-      sourceUrl: "./linkedin.png",
+      sourceUrl: linkedinImg,
       alternativeText: "Linkedin",
     },
     {
       goingToUrl: "https://www.youtube.com/@agiocontabilidade",
-      sourceUrl: "./youtube.png",
+      sourceUrl: youtubeImg,
       alternativeText: "Youtube",
     },
   ],
@@ -215,4 +218,5 @@ export const missionSectionData = {
   },
 }
 
-export const whatsAppNumber = "27992462186"
+export const whatsAppNumber = "279999041303"
+export const agioEmail = "ygorbravimr@gmail.com"
