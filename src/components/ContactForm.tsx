@@ -1,6 +1,5 @@
 "use client"
 import { zodResolver } from "@hookform/resolvers/zod"
-// import emailjs from "emailjs-com"
 import { useState } from "react"
 import { useForm } from "react-hook-form"
 import { z } from "zod"
@@ -13,10 +12,6 @@ export function ContactForm({ rows = 8 }: { rows?: number }) {
   const isSmallScreen = useScreenSize().width < 520
 
   const { toast } = useToast()
-
-  const service_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID as string
-  const email_template_ID = process.env.NEXT_PUBLIC_EMAILJS_EMAIL_TEMPLATE_ID as string
-  const user_ID = process.env.NEXT_PUBLIC_EMAILJS_USER_ID as string
 
   const formSchema = z.object({
     name: z.string().min(1, "Required"),
@@ -45,32 +40,28 @@ export function ContactForm({ rows = 8 }: { rows?: number }) {
       message,
     }
 
-    console.log("templateParams", templateParams)
-
     await fetch("/api/emails", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(templateParams),
-    })
-
-    // await emailjs.send(service_ID, email_template_ID, templateParams, user_ID).then(
-    //   (response) => {
-    //     toast({
-    //       title: `Olá ${name}, seu email foi enviado com sucesso!`,
-    //       variant: "success",
-    //     })
-    //     reset()
-    //   },
-    //   (err) => {
-    //     toast({
-    //       title: `Desculpas ${name}, não conseguimos enviar seu email.`,
-    //       variant: "destructive",
-    //     })
-    //   }
-    // )
-
+    }).then(
+      (response) => {
+        toast({
+          title: `Olá ${name}, seu email foi enviado com sucesso!`,
+          variant: "success",
+        })
+        reset()
+      },
+      (err) => {
+        console.error(err)
+        toast({
+          title: `Desculpas ${name}, não conseguimos enviar seu email.`,
+          variant: "destructive",
+        })
+      }
+    )
     setIsSending(false)
   }
 

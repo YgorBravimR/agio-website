@@ -15,7 +15,7 @@ export function ContactSection() {
   return (
     <section
       id="contact"
-      className={`w-full h-full flex flex-col-reverse lg:flex-col items-center justify-center gap-8 bg-[url('/buildingsPicture.jpg')] bg-cover bg-center bg-no-repeat ${paddingScreenSizes}`}
+      className={`w-full h-full flex flex-col-reverse lg:flex-col items-center justify-center gap-8 bg-[url('/buildingsPicture.jpg')] bg-cover bg-center bg-no-repeat ${paddingScreenSizes} max-w-screen-xl`}
     >
       <div className="w-full hidden lg:flex gap-2 justify-center">
         <Image src={contactSectionData.image.sourceUrl} alt={contactSectionData.image.alternativeText} width={300} height={150} />
@@ -28,7 +28,7 @@ export function ContactSection() {
           ))}
         </div>
       </div>
-      <div className="w-full flex lg:grid lg:grid-cols-2 gap-12 items-center justify-center  max-w-body">
+      <div className="w-full flex lg:grid lg:grid-cols-2 gap-12 items-center justify-center  max-w-screen-xl">
         <ContactForm rows={isMediumScreen ? 4 : 6} />
         <div className="w-full h-full hidden lg:block pb-16">
           <GoogleMaps />

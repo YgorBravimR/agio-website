@@ -11,7 +11,7 @@ export function ServicesSection() {
   return (
     <section
       id="services"
-      className={`w-full h-full grid md:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-8 max-w-body ${paddingScreenSizes}`}
+      className={`w-full h-full grid md:grid-cols-2 lg:grid-cols-3 items-center justify-center gap-8 max-w-screen-xl ${paddingScreenSizes}`}
     >
       {companyInfoData.map((item, i) => (
         <CompanyInfoCard

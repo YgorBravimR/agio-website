@@ -15,7 +15,7 @@ export function MissionSection() {
   return (
     <>
       {isMediumScreen ? (
-        <section id="mission" className="w-full h-[85vh]">
+        <section id="mission" className="w-full h-[85vh] max-w-screen-xl">
           <Swiper
             style={{
               "height": "100%",
@@ -59,7 +59,7 @@ export function MissionSection() {
       ) : (
         <section
           id="mission"
-          className={`w-full flex items-center flex-col justify-center gap-8 lg:text-5xl bg-cover bg-center bg-[url('/buildingsPicture.jpg')] ${paddingScreenSizes}`}
+          className={`w-full flex items-center flex-col justify-center gap-8 lg:text-5xl bg-cover bg-center bg-[url('/buildingsPicture.jpg')] ${paddingScreenSizes} max-w-screen-xl`}
         >
           <div className="p-4 md:w-[70%] md:self-start bg-[#00000020] rounded-2xl">
             <p className="font-bold text-4xl mb-2 text-skyBlueColor">{missionSectionData.mission.title}</p>

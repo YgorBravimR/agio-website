@@ -12,6 +12,10 @@ import {
 import instagramImg from "@/assets/images/instagram.png"
 import linkedinImg from "@/assets/images/linkedin.png"
 import youtubeImg from "@/assets/images/youtube.png"
+import { formatPhoneNumber } from "@/lib/utils"
+
+export const whatsAppNumber = "27999041303"
+export const agioEmail = "ygorbravimr@gmail.com"
 
 export const navbarItems = [
   {
@@ -22,10 +26,10 @@ export const navbarItems = [
     title: "Nossa atuação",
     goingToUrl: "services",
   },
-  // {
-  //   title: "Quem somos",
-  //   goingToUrl: "about",
-  // },
+  {
+    title: "Quem somos",
+    goingToUrl: "about",
+  },
   {
     title: "Nossa missão",
     goingToUrl: "mission",
@@ -105,10 +109,24 @@ export const aboutSectionData = {
     height: 400,
     width: 400,
   },
-  title: "Da abertura do seu CNPJ até a gestão contábil e financeira do seu negócio.",
-  buttonText: "Fale conosco",
-  description:
-    "Temos diversos planos personalizados para a necessidade da sua empresa... Lorem ipsum dolor sit amet, consectetur adipiscingelit. Nulla rhoncus iaculis mollis. Fusce egestas tincidunt mi vitae tempus. Fusce aliqu et luctus leo, imperdiet eleifend ex dapibus et. Sed lorem nibh, dignissim vel eleifend feugiat, cursus vel dui. Integer eu nisl eleifend, auctor dolor non, tincidunt felis. Quisque lobortis sollic itudin enim, vitae iaculis elit dignissim id. Proin a lorem ligula. Vestibulum tincidunt justo q",
+  title: "Porque nos contratar?",
+  cards: [
+    {
+      title: "Atendimento humanizado",
+      description:
+        "Contamos com um time preparado para solucionar e entender as suas demandas com atendimento totalmente humanizado, rápido e objetivo.",
+    },
+    {
+      title: "Atuação Nacional",
+      description:
+        "Atendemos empresas em todo o Brasil, nos maisdiversos segmentos de atividade observando ascaracterísticas da sua região.",
+    },
+    {
+      title: "Experiência Comprovada",
+      description:
+        "Atuamos no ramo do serviço, comércio e indústria e já emitimos mais de MIL laudos para empresas das mais diversas áreas de atuação",
+    },
+  ],
 }
 
 export const socialProvesSectionData = {
@@ -116,45 +134,23 @@ export const socialProvesSectionData = {
   cards: [
     {
       description:
-        "Texto de prova social Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rhoncus iacu mollis. egestas tincidunt mi vitae tempus. Fusce aliquet leo, imperdiet eleifend ex dapibus et. Sed lorem nibh, cus iacu mollis. awdssaccad egestas doiu lor tincidunt mi vitae tempus. Fusc",
-      company: "Fulana de tal",
-      image: "https://source.unsplash.com/300x200/?office",
-      userName: "Empresa da Silva Sauro ME",
+        "Eu contratei a Àgio em um momento que eu tinha acabado de ser enganada por um contador que em vez de pagar os impostos, ficava com o dinheiro. Então o que tenho a dizer é que a seriedade e profissionalismo da Àgio resolveu tudo que eu precisava e hoje tenho confiança no meu contador.",
+      company: "Liliam Lima",
+      image: "/liliamLima.jpg",
+      userName: "LILIAM LIMA ME - Empresa de TI",
     },
     {
       description:
-        "Texto de prova social Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rhoncus iacu mollis. egnd ex dapibus et. Sed lorem nibh, cus iacu mollis. awdssaccad egestas doiu lor tincidunt mi vitae tempus. Fusc",
-      company: "Fulana de tal",
-      image: "https://source.unsplash.com/300x200/?technology",
-      userName: "Empresa da Silva Sauro ME",
+        "Tive contato com algumas empresas de contabilidade e até hoje a que conseguiu atender a minha demanda de forma eficiente foi a Àgio Contabilidade. Muito obrigado a todos os envolvidos pelo íncrível suporte sempre prestado.",
+      company: "Denílton Andrada",
+      image: "/deniltonAndrade.jpg",
+      userName: "DENILTON ANDRADE LTDA - Empresa de TI",
     },
     {
-      description:
-        "Texto de prova social Loreor sit amet Fusce aliquet leo, imperdiet eleibus et. Sed bh, cus iacu mollis. awdssaccad egestas doiu i vitae tempusc",
-      company: "Fulana de tal",
-      image: "https://source.unsplash.com/300x200/?work",
-      userName: "Empresa da Silva Sauro ME",
-    },
-    {
-      description:
-        "Texto de prova social Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rhoncus iacu mollis. egestas tincidunt mi vitae tempus. Fusce aliquet leo, imperdiet eleifend ex dapibus et. Sed lorem nibh, cus iacu mollis. awdssaccad egestas doiu lor tincidunt mi vitae tempus. Fusc",
-      company: "Fulana de tal",
-      image: "https://source.unsplash.com/300x200/?office",
-      userName: "Empresa da Silva Sauro ME",
-    },
-    {
-      description:
-        "Texto de prova social Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla rhoncus iacu mollis. egnd ex dapibus et. Sed lorem nibh, cus iacu mollis. awdssaccad egestas doiu lor tincidunt mi vitae tempus. Fusc",
-      company: "Fulana de tal",
-      image: "https://source.unsplash.com/300x200/?technology",
-      userName: "Empresa da Silva Sauro ME",
-    },
-    {
-      description:
-        "Texto de prova social Loreor sit amet Fusce aliquet leo, imperdiet eleibus et. Sed bh, cus iacu mollis. awdssaccad egestas doiu i vitae tempusc",
-      company: "Fulana de tal",
-      image: "https://source.unsplash.com/300x200/?work",
-      userName: "Empresa da Silva Sauro ME",
+      description: "Excelente serviço de contabilidade, rápida resolução e atendimento.",
+      company: "Samanta Caroline",
+      image: "/fisioterapia.webp",
+      userName: "Fisioterapeuta",
     },
   ],
 }
@@ -175,7 +171,7 @@ export const contactSectionData = {
     },
     {
       icon: <SmartphoneIcon width={32} height={32} fill="#009db6" />,
-      description: "(27) 99999-9999",
+      description: formatPhoneNumber(whatsAppNumber),
     },
   ],
 }
@@ -184,12 +180,12 @@ export const footerSectionData = {
   workingTimeText: "Seg a Sex: 08:00 às 18:00",
   icons: [
     {
-      goingToUrl: "https://www.instagram.com/user/",
+      goingToUrl: "https://www.instagram.com/contabilidadeagio/",
       sourceUrl: instagramImg,
       alternativeText: "Instagram",
     },
     {
-      goingToUrl: "https://www.linkedin.com/in/user/",
+      goingToUrl: "https://www.linkedin.com/company/%C3%A1gio-contabilidade-e-per%C3%ADcia/",
       sourceUrl: linkedinImg,
       alternativeText: "Linkedin",
     },
@@ -217,6 +213,3 @@ export const missionSectionData = {
     description: "Transparência, respeito e atendimento humanizado, são os valores que nós prezamos.",
   },
 }
-
-export const whatsAppNumber = "279999041303"
-export const agioEmail = "ygorbravimr@gmail.com"
